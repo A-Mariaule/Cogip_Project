@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,8 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
 </head>
-<?php include('vite-project/header.php');?>
+
 <body>
+    <header> 
+
+        <?php 
+        include 'header.php'; 
+        ?>
+
+        <section class="herosection">
+                <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
+                <img src="" alt="heroSectionImg1">
+                <img src="" alt="heroSectionImg2">
+            </section>
+
+    </header>
+
    
     <main>
 
@@ -15,24 +30,27 @@
             <img src="" alt="blocknote">
             <img src="" alt="spotlight">
 
-            <section class="lastInvoices">
+            <section class="arrays__lastInvoices">
                 <h2>Last invoices </h2>
             </section>
 
-            <section class="lastContacts">
+            <section class="arrays__lastContacts">
                 <h2>Last contacts </h2>
             </section>
 
-            <section class="lastCompanies">
+            <section class="arrays__lastCompanies">
                 <h2>Last companies </h2>
             </section>
 
-            <section class="main_Footer">
+        </div>
+
+        <section class="main__Footer">
                 <h1>WORK BETTER IN YOUR COMPANY</h1>  
                 <img src="" alt="rectangle"> 
                 <img src="" alt="phone"> 
-            </section>
+        </section>
+
     </main>
-    <?php require('vite-project/footer.php');?>
+    
 </body>
 </html>

@@ -1,7 +1,5 @@
-    <header>
-        <img src="" alt="logo">
-
-        <section class="navbar">
+<?php
+echo '<section class="navbar">
             <nav>
                 <a href="#">Home</a>
                 <a href="#">Invoices</a>
@@ -13,12 +11,5 @@
         <section class="login">
             <a class= "signUp"href="#">Sign up</a>
             <a href="#">Login</a>
-        </section>   
-
-        <section class="herosection">
-            <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
-            <img src="" alt="heroSectionImg1">
-            <img src="" alt="heroSectionImg2">
-        </section>
-
-    </header>
+        </section>';
+    ?>

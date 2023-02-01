@@ -17,7 +17,7 @@
 
         <section class="herosection">
                 <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
-                <img src="" alt="heroSectionImg1">
+                <img src="./public/img/DrawKit Vector Illustration Project Manager (4) 1sectionheroimg1.svg" alt="heroSectionImg1">
                 <img src="" alt="heroSectionImg2">
             </section>
 

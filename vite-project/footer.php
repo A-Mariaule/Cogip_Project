@@ -13,14 +13,14 @@ echo '<footer>
                     </section>
 
                     <section class="footer__socialmedia">
-                        <a href="#"><img src="" alt="facebook"></a>
-                        <a href="#"><img src="" alt="twitter"></a>
-                        <a href="#"><img src="" alt="linkedin"></a>
-                        <a href="#"><img src="" alt="youtube"></a>
-                        <a href="#"><img src="" alt="instagram"></a>
-                        <a href="#"><img src="" alt="google+"></a>
-                        <a href="#"><img src="" alt="pinterest"></a>
-                        <a href="#"><img src="" alt="flux rss"></a>
+                        <a href="#"><img src="./public/img/Facebook.svg" alt="facebook"></a>
+                        <a href="#"><img src="./public/img/Twitter.svg" alt="twitter"></a>
+                        <a href="#"><img src="./public/img/LinkedIn.svg" alt="linkedin"></a>
+                        <a href="#"><img src="./public/img/Youtube.svg" alt="youtube"></a>
+                        <a href="#"><img src="./public/img/Instagram.svg" alt="instagram"></a>
+                        <a href="#"><img src="./public/img/GooglePlus.svg" alt="google+"></a>
+                        <a href="#"><img src="./public/img/pinterest.svg" alt="pinterest"></a>
+                        <a href="#"><img src="./public/img/RSS.svg" alt="flux rss"></a>
                     </section>
                 </div>
 

@@ -17,8 +17,8 @@
 
         <section class="herosection">
                 <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
-                <img src="./public/img/DrawKit Vector Illustration Project Manager (4) 1sectionheroimg1.svg" alt="heroSectionImg1">
-                <img src="" alt="heroSectionImg2">
+                <img src="./public/img/herosectionImg1.svg" alt="heroSectionImg1">
+                <img src="./public/img/herosectionImg2.svg" alt="heroSectionImg2">
             </section>
 
     </header>
@@ -27,8 +27,8 @@
     <main>
 
         <div class="arrays">
-            <img src="" alt="blocknote">
-            <img src="" alt="spotlight">
+            <img src="./public/img/blocknote.svg" alt="blocknote">
+            <img src="./public/img/spotlight.svg" alt="spotlight">
 
             <section class="arrays__lastInvoices">
                 <h2>Last invoices </h2>
@@ -46,8 +46,8 @@
 
         <section class="main__Footer">
                 <h1>WORK BETTER IN YOUR COMPANY</h1>  
-                <img src="" alt="rectangle"> 
-                <img src="" alt="phone"> 
+                <img src="./public/img/Rectangle.svg" alt="rectangle"> 
+                <img src="./public/img/phone.svg" alt="phone"> 
         </section>
 
     </main>

@@ -2,7 +2,7 @@
 
 <?php
 echo '<footer>
-                <img src="" alt="logo_border">
+                <img src="./public/img/logo.svg" alt="logo_border">
 
                 <div class="footer">
 

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$yellow : rgba(249, 222, 78, 1);
+$white : rgba(255, 255, 255, 1);
+$lightgrey: rgba(245, 245, 245, 1);
+$black: rgba(0, 0, 0, 1);
+$lightblue: rgba(123, 185, 252, 1);
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    color: $black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    
+}
+
+// header
+body{
+        width: 30%;
+    header{
+        background-color: $yellow;
+        width: 100vw;
+        height: auto;
+        display: inline-block;
+        .logo{
+            width: 20%;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        nav{
+            position: absolute;
+            top: 0;
+            left:0;
+            padding: 10% 0;
+            background-color: $white;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            display: none;
+        }
+        .login{
+            text-align: center;
+            position: absolute;
+            left: 40%;
+            font-size:0.9rem ;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            
+
+            .signUp{
+                background-color: white;
+                padding: 0.25em 0.5em;
+                border-radius: 5px;
+            }
+            
+        }
+
+        //herosection
+        .herosection{
+            display: flex;
+            flex-direction: column;
+            h1{
+                width: 100%;
+                font-size: 1.8rem;
+                font-weight: 900;
+                text-align: center;
+                margin-top: 10%;
+            }
+            img{
+                width: 100%;
+            }
+            .herosectionImg2{
+                width: 90%;
+                margin: 0 auto;
+
+            }
+        }
+    }
+
+    /*à remettre au propre par après
+    main{
+        .arrays{
+width: 100%;
+font-size: 0.5rem;
+        }
+        .main__Footer{
+            img{
+                width: 40%;
+        }
+    }
+    }
+    
+
+ */   
+}

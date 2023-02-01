@@ -1,7 +1,8 @@
 <?php
 
 echo '
-        <img src="./public/img/logo.svg" alt="logo">
+
+        <img class="logo"src="./public/img/logo.svg" alt="logo">
         <section class="navbar">
             <nav>
                 <a href="#">Home</a>

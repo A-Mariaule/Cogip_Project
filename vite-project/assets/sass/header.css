@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  width: 30%;
+  /*à remettre au propre par après
+      main{
+          .arrays{
+  width: 100%;
+  font-size: 0.5rem;
+          }
+          .main__Footer{
+              img{
+                  width: 40%;
+          }
+      }
+      }
+
+
+   */
+}
+body header {
+  background-color: rgb(249, 222, 78);
+  width: 100vw;
+  height: auto;
+  display: inline-block;
+}
+body header .logo {
+  width: 20%;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+body header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10% 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: none;
+}
+body header .login {
+  text-align: center;
+  position: absolute;
+  left: 40%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+body header .login .signUp {
+  background-color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
+body header .herosection {
+  display: flex;
+  flex-direction: column;
+}
+body header .herosection h1 {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 10%;
+}
+body header .herosection img {
+  width: 100%;
+}
+body header .herosection .herosectionImg2 {
+  width: 90%;
+  margin: 0 auto;
+}/*# sourceMappingURL=header.css.map */

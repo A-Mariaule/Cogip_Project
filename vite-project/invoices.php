@@ -11,14 +11,14 @@
 
 <body>
     <main>
+
         <section class="title">
             <h1 class="underline_title">All invoices</h1>
         </section>
-        <section class="bar_search">
-            <form class="search" action="/search" method="get">
-                <input type="text" name="q" placeholder="Search...">
+
+            <form action="/search" method="get">
+                <input class="bar_search" type="text" name="q" placeholder="Search...">
             </form>
-        </section>
 
         <section class="array">
             <table>

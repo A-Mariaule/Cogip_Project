@@ -14,6 +14,7 @@ $lightblue: rgba(123, 185, 252, 1);
 body {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
+
     main {
         margin-top: 50%;
 
@@ -37,41 +38,50 @@ body {
 
         }
 
-        .search {
-            margin-left: 55%;
+        .bar_search {
+            margin-left: 65%;
             margin-top: 2%;
+            border-radius: 10%;
+            width: 25%;
         }
 
         .array {
-            margin-top: 2%;
+            margin-top: 20%;
             display: flex;
             justify-content: center;
-            
+
+            table {
+
+                tr {
+                    font-size: 90%;
+
+                    th {
+                        position: relative;
+                        z-index: 1;
 
 
-            tr {
-                font-size: 90%;
-                th {
-                    position: relative;
-                    z-index: 1;
-
-                    &::before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        background-color: #F9DE4E;
-                        height: 140%;
-                        width: 130%;
-                        z-index: -1;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            background-color: #F9DE4E;
+                            height: 140%;
+                            width: 140%;
+                            z-index: -1;
+                            right: 15%;
+                            left: 0;
+                            bottom: 0;
+                            top: 0;
+                            margin: auto;
+                        }
                     }
+
                 }
 
                 td {
                     padding: 3%;
                 }
+
             }
         }
     }

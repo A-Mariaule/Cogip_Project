@@ -28,34 +28,38 @@ body main h1::before {
   margin-left: 18.5%;
   display: block;
 }
-body main .search {
-  margin-left: 55%;
+body main .bar_search {
+  margin-left: 65%;
   margin-top: 2%;
+  border-radius: 10%;
+  width: 25%;
 }
 body main .array {
-  margin-top: 2%;
+  margin-top: 20%;
   display: flex;
   justify-content: center;
 }
-body main .array tr {
+body main .array table tr {
   font-size: 90%;
 }
-body main .array tr th {
+body main .array table tr th {
   position: relative;
   z-index: 1;
 }
-body main .array tr th::before {
+body main .array table tr th::before {
   content: "";
   display: block;
   position: absolute;
   background-color: #F9DE4E;
   height: 140%;
-  width: 130%;
+  width: 140%;
   z-index: -1;
+  right: 15%;
   left: 0;
-  right: 0;
   bottom: 0;
+  top: 0;
+  margin: auto;
 }
-body main .array tr td {
+body main .array table td {
   padding: 3%;
 }/*# sourceMappingURL=invoices.css.map */

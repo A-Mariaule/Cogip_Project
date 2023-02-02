@@ -24,7 +24,7 @@
 
     </header>
 
-    <!-- 
+
     <main>
 
         <div class="arrays">
@@ -185,4 +185,4 @@
         include 'footer.php'; 
         ?>
 </body>
-</html>-- >
+</html>

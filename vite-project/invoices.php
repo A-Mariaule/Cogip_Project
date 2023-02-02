@@ -16,48 +16,53 @@
             <h1 class="underline_title">All invoices</h1>
         </section>
 
-            <form action="/search" method="get">
-                <input class="bar_search" type="text" name="q" placeholder="Search...">
-            </form>
+        <form action="/search" method="get">
+            <input class="bar_search" type="text" name="q" placeholder="Search...">
+        </form>
 
         <section class="array">
             <table>
-                <tr>
-                    <th>Invoice Number</th>
-                    <th>Date Due</th>
-                    <th>Company</th>
-                    <th>Created At</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>01/01/23</td>
-                    <td>XYZ</td>
-                    <td>01/01/23</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>15/01/23</td>
-                    <td>ABC</td>
-                    <td>10/01/23</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>28/01/23</td>
-                    <td>PQR</td>
-                    <td>20/01/23</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>05/02/23</td>
-                    <td>DEF</td>
-                    <td>25/01/23</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>12/02/23</td>
-                    <td>GHI</td>
-                    <td>30/01/23</td>
-                </tr>
+
+                <thead>
+                    <tr>
+                        <th>Invoice Number</th>
+                        <th>Date Due</th>
+                        <th>Company</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>01/01/23</td>
+                        <td>XYZ</td>
+                        <td>01/01/23</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>15/01/23</td>
+                        <td>ABC</td>
+                        <td>10/01/23</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>28/01/23</td>
+                        <td>PQR</td>
+                        <td>20/01/23</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>05/02/23</td>
+                        <td>DEF</td>
+                        <td>25/01/23</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>12/02/23</td>
+                        <td>GHI</td>
+                        <td>30/01/23</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 

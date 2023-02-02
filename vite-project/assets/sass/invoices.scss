@@ -18,7 +18,7 @@ body {
     main {
         margin-top: 50%;
 
-        h1 {
+        .underline_title {
 
             margin-left: 5%;
             font-size: 2rem;
@@ -43,6 +43,7 @@ body {
             margin-left: 65%;
             border-radius: 10%;
             width: 25%;
+            
         }
 
         .array {
@@ -53,7 +54,7 @@ body {
             table {
 
                 tr {
-                    font-size: 90%;
+                    font-size: 80%;
 
                     th {
                         position: relative;
@@ -82,6 +83,9 @@ body {
                     padding: 3%;
                 }
 
+                tbody tr:nth-child(even) {
+                    background-color: #F5F5F5;
+                }
             }
         }
     }

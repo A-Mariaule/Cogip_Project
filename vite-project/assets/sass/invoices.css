@@ -11,13 +11,13 @@ body {
 body main {
   margin-top: 50%;
 }
-body main h1 {
+body main .underline_title {
   margin-left: 5%;
   font-size: 2rem;
   position: relative;
   z-index: 2;
 }
-body main h1::before {
+body main .underline_title::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -39,7 +39,7 @@ body main .array {
   justify-content: center;
 }
 body main .array table tr {
-  font-size: 90%;
+  font-size: 80%;
 }
 body main .array table tr th {
   position: relative;
@@ -61,4 +61,7 @@ body main .array table tr th::before {
 }
 body main .array table td {
   padding: 3%;
+}
+body main .array table tbody tr:nth-child(even) {
+  background-color: #F5F5F5;
 }/*# sourceMappingURL=invoices.css.map */

@@ -30,12 +30,11 @@ body main h1::before {
 }
 body main .bar_search {
   margin-left: 65%;
-  margin-top: 2%;
   border-radius: 10%;
   width: 25%;
 }
 body main .array {
-  margin-top: 20%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
 }
@@ -54,7 +53,7 @@ body main .array table tr th::before {
   height: 140%;
   width: 140%;
   z-index: -1;
-  right: 15%;
+  right: 0;
   left: 0;
   bottom: 0;
   top: 0;

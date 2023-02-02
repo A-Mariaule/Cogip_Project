@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+body main {
+  margin-top: 50%;
+}
+body main h1 {
+  margin-left: 5%;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+}
+body main h1::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background-color: #F9DE4E;
+  height: 42%;
+  width: 35%;
+  top: 45%;
+  margin-left: 18.5%;
+  display: block;
+}
+body main .search {
+  margin-left: 55%;
+  margin-top: 2%;
+}
+body main .array {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+body main .array tr {
+  font-size: 90%;
+}
+body main .array tr th {
+  position: relative;
+  z-index: 1;
+}
+body main .array tr th::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #F9DE4E;
+  height: 140%;
+  width: 130%;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body main .array tr td {
+  padding: 3%;
+}/*# sourceMappingURL=invoices.css.map */

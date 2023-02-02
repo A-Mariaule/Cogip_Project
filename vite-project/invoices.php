@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/sass/invoices.css">
+    <title>invoices</title>
 </head>
 
 <body>
     <main>
+        <section class="title">
+            <h1 class="underline_title">All invoices</h1>
+        </section>
+        <section class="bar_search">
+            <form class="search" action="/search" method="get">
+                <input type="text" name="q" placeholder="Search...">
+            </form>
+        </section>
+
         <section class="array">
             <table>
                 <tr>
@@ -50,6 +60,8 @@
                 </tr>
             </table>
         </section>
+
     </main>
 </body>
+
 </html>

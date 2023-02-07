@@ -30,14 +30,15 @@ body main .underline_title::before {
 }
 body main .bar_search {
   margin-left: 65%;
-  border-radius: 10%;
-  width: 25%;
+  border-radius: 15%;
+  width: 70%;
 }
 body main .array {
   margin-top: 5%;
   display: flex;
   justify-content: center;
-  transform: translate(20%, 30%);
+}
+body main .array table {
   width: 100%;
 }
 body main .array table tr th {

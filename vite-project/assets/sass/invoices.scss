@@ -43,20 +43,20 @@ body {
             margin-left: 65%;
             border-radius: 10%;
             width: 25%;
-            
+
         }
 
         .array {
             margin-top: 5%;
             display: flex;
             justify-content: center;
+            transform: translate(20%, 30%);
+
 
             table {
-
                 tr {
-                    font-size: 80%;
-
                     th {
+                        
                         position: relative;
                         z-index: 1;
 

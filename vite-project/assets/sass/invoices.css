@@ -38,6 +38,7 @@ body main .array {
   display: flex;
   justify-content: center;
   transform: translate(20%, 30%);
+  width: 100%;
 }
 body main .array table tr th {
   position: relative;

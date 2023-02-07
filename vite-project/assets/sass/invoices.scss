@@ -51,12 +51,13 @@ body {
             display: flex;
             justify-content: center;
             transform: translate(20%, 30%);
+            width: 100%;
 
 
             table {
                 tr {
                     th {
-                        
+
                         position: relative;
                         z-index: 1;
 

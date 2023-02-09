@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   }
    
-  header("Refresh:0; url=Addform.html");
+  header("Refresh:0; url=../Form_Html/addFormCompanies.html");
   
 }
 

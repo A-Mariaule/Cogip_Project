@@ -36,7 +36,7 @@ class invoices extends Dbh {
 
     public function post_invoices(){
         $data = json_decode(file_get_contents('php://input'), true);
-        $sql="INSERT INTO invoices (ref, id_company, create_dat, update_dat) VALUES (:ref, :id_company, :create_dat, :update_dat)";
+        $sql="INSERT INTO invoices (ref, id_company, create_dat,update_dat) VALUES (:ref, :id_company, :create_dat,:update_dat)";
         $add=$this->connect()->prepare($sql);
         $add->bindValue(':ref', $data["ref"]);
         $add->bindValue(':id_company', $data["id_company"]);

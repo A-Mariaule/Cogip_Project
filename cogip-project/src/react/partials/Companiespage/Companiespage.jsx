@@ -1,9 +1,10 @@
 import Header from "../Header";
 import Header_Img from "../Header_Img";
-import InvoicesPageTable from "./Invoicespage_Array";
+import CompaniesPageTable from "./Compagniespage_Array";
 import Footer from "../footer";
 
-function Invoicespage(){
+
+function Companiespage(){
 
     return(
       <div>
@@ -14,7 +15,7 @@ function Invoicespage(){
         <main>
         <div className="arrays">
           <section className="overflowArray">
-          <Invoicespage/>
+          <Companiespage/>
           </section>
           </div>
         </main>
@@ -23,4 +24,4 @@ function Invoicespage(){
     );
 
 }
-export default Invoicespage
+export default Companiespage

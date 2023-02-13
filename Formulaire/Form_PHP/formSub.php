@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         echo "
     <script>     
-    data = {  first_name: '$first_name', role_id:'$role_id', last_name:'$name', email:'$email', password:'$password', create_dat: '$create_dat'}
+    data = {  first_name: '$first_name', role_id:'$role_id', last_name:'$name', email:'$email', password:'$password', create_dat: '$create_dat', update_dat: '$create_dat'}
     let url='http://localhost:8001/users';
     let option = {
       method: 'POST',

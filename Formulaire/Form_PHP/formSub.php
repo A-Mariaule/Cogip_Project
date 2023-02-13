@@ -15,9 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (!preg_match("/^[a-zA-Z]+$/", $first_name)) {
         echo "<script> alert('Le prénom ne peut contenir que des lettres.') </script>";
         $error = true;
-    } elseif (!preg_match("/^[1-3]+$/", $role_id)) {
-        echo "<script> alert('Le role_id ne peut être que 1, 2 ou 3.') </script>";
-        $error = true;
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script> alert('L\'adresse email n\'est pas valide.') </script>";
         $error = true;
@@ -32,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         echo "
     <script>     
-    data = { name : '$name', first_name: '$first_name' role_id:'$role_id', email:'$email', password:'$password', create_dat: '$create_dat'}
+    data = {  first_name: '$first_name', role_id:'$role_id', last_name:'$name', email:'$email', password:'$password', create_dat: '$create_dat'}
     let url='http://localhost:8001/users';
     let option = {
       method: 'POST',

@@ -36,12 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if($elem["email"]==$email && $elem["password"]==$password){
                     session_start();
                     $_SESSION["id"]=$elem["id"];
+                   // header("Refresh:0; url=../Form_Html/addFormLogin.html");
 
                 }
-                else{
-                    $errors[] = ";
-                }
             }
+            $errors[] = "the email or the password is incorrect";
 
 
             

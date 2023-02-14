@@ -1,10 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $errors[]=array();
     if(empty($_POST["email"])) {
-        $error_email = "Email is required";
+        $errors[] = "Email is required";
     }
     if(empty($_POST["password"])) {
-        $error_password = "Password is required";
+        $errors[] = "Password is required";
     }
 
     //récupération des variables
@@ -21,17 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         else{
             if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $error_email="<p class='errorMsg'>Warning: the format of the e-mail address is incorrect</p>";
+                $errors[]="Warning: the format of the e-mail address is incorrect";
             }
             if (!preg_match("/^[a-zA-Z\d\\-_]+$/", $password)){
-                $error_password="<p class='errorMsg'>Warning: incorrect password. The format of the password is incorrect.</p>";
+                $errors[]="Warning: incorrect password. The format of the password is incorrect.";
             }
         }
     }
-    else{
-    echo (isset($error_email))? $error_email: '';
-    echo (isset($error_password))? $error_password: '';
-    }
+    
 }
 
 ?>

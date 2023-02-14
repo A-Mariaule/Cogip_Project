@@ -1,6 +1,4 @@
 <?php
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($_POST["email"])) {
         $errors[] = "Email is required";
@@ -36,11 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if($elem["email"]==$email && $elem["password"]==$password){
                     session_start();
                     $_SESSION["id"]=$elem["id"];
-                   // header("Refresh:0; url=../Form_Html/addFormLogin.html");
+                    header("Refresh:0; url=../Form_Html/addFormLogin.html");
 
                 }
             }
-            $errors[] = "the email or the password is incorrect";
+            if(!isset($_SESSION["id"])){
+                $errors[] = "the email or the password is incorrect";
+            }
 
 
             
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo"<script> alert('".$errors[0]."') </script>";
     }
 
-    //header("Refresh:0; url=../Form_Html/addFormLogin.html");
+    header("Refresh:0; url=../Form_Html/addFormLogin.html");
 }
 
 ?>

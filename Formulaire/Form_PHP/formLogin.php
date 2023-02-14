@@ -29,7 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
     }
-    
+    foreach ($errors as $error) {
+        echo"<script> alert('".$error."') </script>";
+    }
+
+    header("Refresh:0; url=../Form_Html/addFormLogin.html");
 }
 
 ?>

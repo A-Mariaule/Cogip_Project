@@ -110,6 +110,7 @@ include "class/companies.php";
 include "class/contacts.php";
 include "class/users.php";
 include "class/roles.php";
+include "class/connexion.php";
 //connexion à l'api
 if (isset($_SERVER['HTTP_ORIGIN'])) {
         // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
@@ -292,10 +293,16 @@ $router->get('/roles',function(){
     $user->get_roles();
 });
 
+//API Affiche le role correspondant à l'id
 $router->get('/role/{id}',function($id){
     $user = new roles();
     $user->get_roleID($id);
 });
 
+
+$router->POST('/connexion',function(){
+    $user = new connexion();
+    $user->connecter();
+});
 
 $router->run();

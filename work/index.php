@@ -312,6 +312,12 @@ $router->get('/connexion',function(){
     $user->estConnecte();
 });
 
+//API vérifie si l'utilisateur est connecté
+$router->get('/deconnexion',function(){
+    $user = new connexion();
+    $user->deconnecter();
+});
+
 
 
 $router->run();

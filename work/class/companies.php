@@ -64,11 +64,11 @@ class companies extends Dbh {
             $error = true;
         } else {
           // Sanitization des données du formulaire
-          $name = filter_var($name, FILTER_SANITIZE_STRING);
+          /*$name = filter_var($name, FILTER_SANITIZE_STRING);
           $type_id = filter_var($type_id, FILTER_SANITIZE_NUMBER_INT);
           $country = filter_var($country, FILTER_SANITIZE_STRING);
           $tva = filter_var($tva, FILTER_SANITIZE_STRING);
-          $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);
+          $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);*/
         }        
         if(!$error){
         $sql="INSERT INTO companies (name, type_id, country, tva, create_dat) VALUES (:name, :type_id, :country, :tva, :create_dat)";
@@ -111,11 +111,11 @@ class companies extends Dbh {
             $error = true;
         } else {
           // Sanitization des données du formulaire
-          $name = filter_var($name, FILTER_SANITIZE_STRING);
+          /*$name = filter_var($name, FILTER_SANITIZE_STRING);
           $type_id = filter_var($type_id, FILTER_SANITIZE_NUMBER_INT);
           $country = filter_var($country, FILTER_SANITIZE_STRING);
           $tva = filter_var($tva, FILTER_SANITIZE_STRING);
-          $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);
+          $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);*/
         }        
         if(!$error){
         $sql="UPDATE companies SET name=:name,type_id=:type_id , tva=:tva,country=:country  WHERE id = $id ";

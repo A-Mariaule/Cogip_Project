@@ -27,7 +27,7 @@ class Connexion extends Dbh {
        }
        else{
            $email=filter_var($email, FILTER_SANITIZE_EMAIL);
-           $password = filter_var($password,FILTER_SANITIZE_STRING);
+           /*$password = filter_var($password,FILTER_SANITIZE_STRING);*/
        }
        if(!$error){
            $sql='SELECT * FROM users WHERE email= :email and password=:password';
@@ -54,11 +54,22 @@ class Connexion extends Dbh {
        // Supprimer l'utilisateur de la session
        unset($_SESSION['utilisateur']);
        $this->utilisateur = null;
+       if($this->utilisateur == null){
+         header('Content-Type: application/json');
+         echo json_encode(['message'=> 'déconnecté']);
+       }
     }
  
     public function estConnecte() {
        // Vérifier si l'utilisateur est enregistré dans la session
-       return $this->utilisateur != null;
+       if($this->utilisateur != null){
+         header('Content-Type: application/json');
+         echo json_encode(['message'=> 'connecté']);
+       }
+       else{
+         header('Content-Type: application/json');
+         echo json_encode(['message'=> ' non connecté']);
+       }
     }
  
     public function getUtilisateur() {

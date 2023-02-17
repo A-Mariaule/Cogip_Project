@@ -15,14 +15,24 @@ submit.addEventListener("submit", function (event) {
     },
   }
   fetch(url, option)
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('Erreur lors de la récupération des données.');
-    }
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
   })
-  .then(data => console.log(data.message))
-  .catch(error => console.error(error));
+  .catch(error => {
+    console.error('Erreur lors de la récupération des données:', error);
+  });
+
+  let option2 = {
+    method: 'GET'
+  }
+  fetch(url, option2)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Erreur lors de la récupération des données:', error);
+  });
 });
 

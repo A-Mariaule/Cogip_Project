@@ -43,6 +43,10 @@ class Connexion extends Dbh {
                 header('Content-Type: application/json');
                 echo json_encode(['message'=> 'ok valide']);
            }
+           else{
+            header('Content-Type: application/json');
+            echo json_encode(['error'=> 'non valide']);
+           }
        }
     }
  

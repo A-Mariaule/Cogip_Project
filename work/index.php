@@ -300,9 +300,12 @@ $router->get('/role/{id}',function($id){
 });
 
 
+//API connecte l'utilisateur
 $router->POST('/connexion',function(){
     $user = new connexion();
     $user->connecter();
 });
+
+
 
 $router->run();

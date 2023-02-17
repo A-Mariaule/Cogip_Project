@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        let url='http://localhost:8001/delete';
+        let url='http://localhost:8001/company/14';
     let option = {
     method: 'DELETE'/*
      body: JSON.stringify(data),

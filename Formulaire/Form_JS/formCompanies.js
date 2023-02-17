@@ -11,7 +11,7 @@ submit.addEventListener("submit",function(event){
     data = { name : name,  type_id : type_id, country:country,tva:tva,create_dat:create_dat}
     let url='http://localhost:8001/companies';
     let option = {
-    method: 'POST',
+    method: 'Post',
      body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json',

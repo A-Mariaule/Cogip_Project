@@ -118,10 +118,11 @@ class companies extends Dbh {
           $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);
         }        
         if(!$error){
-        $sql="UPDATE companies SET name=:name , tva=:tva,country=:country  WHERE id = $id ";
+        $sql="UPDATE companies SET name=:name,type_id=:type_id , tva=:tva,country=:country  WHERE id = $id ";
         $change=$this->connect()->prepare($sql);
         $change->bindValue(':name', $data["name"]);
         $change->bindValue(':tva', $data["tva"]);
+        $change->bindValue(':type_id', $data["type_id"]);
         $change->bindValue(':country', $data["country"]);
         $change->execute();
         header('Content-Type: application/json');

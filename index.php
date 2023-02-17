@@ -8,9 +8,9 @@
 </head>
 <body>
     <script>
-        let url='http://localhost:8001/company/14';
+        let url='http://localhost:8001/company/3';
     let option = {
-    method: 'DELETE'/*
+    method: 'GET'/*
      body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json',
@@ -18,7 +18,7 @@
 */}
     fetch(url,option)
     .then(response => response.json())
-    .then(data => console.log(data.message))
+    .then(data => console.log(data))
     .catch(error => console.error(error));
     </script>
 </body>

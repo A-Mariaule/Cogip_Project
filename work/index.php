@@ -306,6 +306,12 @@ $router->POST('/connexion',function(){
     $user->connecter();
 });
 
+//API vérifie si l'utilisateur est connecté
+$router->get('/connexion',function(){
+    $user = new connexion();
+    $user->estConnecte();
+});
+
 
 
 $router->run();

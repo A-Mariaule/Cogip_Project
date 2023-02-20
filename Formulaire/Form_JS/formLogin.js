@@ -23,6 +23,7 @@ submit.addEventListener("submit", function (event) {
     console.error('Erreur lors de la récupération des données:', error);
   });
 
+
   let option2 = {
     method: 'GET'
   }

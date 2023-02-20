@@ -299,23 +299,25 @@ $router->get('/role/{id}',function($id){
     $user->get_roleID($id);
 });
 
-
+$user = new connexion();
 //API connecte l'utilisateur
-$router->POST('/connexion',function(){
-    $user = new connexion();
+$router->POST('/connexion',function() use ($user){
     $user->connecter();
 });
 
 //API vérifie si l'utilisateur est connecté
-$router->get('/connexion',function(){
-    $user = new connexion();
+$router->get('/connexion',function() use ($user){
     $user->estConnecte();
 });
 
 //API vérifie si l'utilisateur est connecté
-$router->get('/deconnexion',function(){
-    $user = new connexion();
+$router->get('/deconnexion',function() use ($user){
     $user->deconnecter();
+});
+
+//API vérifie si l'utilisateur est connecté
+$router->get('/connecte',function() use ($user){
+    $user->getUtilisateur();
 });
 
 

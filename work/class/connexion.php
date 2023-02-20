@@ -41,7 +41,7 @@ class Connexion extends Dbh {
                 $_SESSION['utilisateur'] = $email;
                 $this->utilisateur = $email;
                 header('Content-Type: application/json');
-                echo json_encode(['message'=> 'ok valide']);
+                echo json_encode(['message'=> $_SESSION["utilisateur"] . "est connecte"]);
            }
            else{
             header('Content-Type: application/json');
@@ -68,12 +68,19 @@ class Connexion extends Dbh {
        }
        else{
          header('Content-Type: application/json');
-         echo json_encode(['message'=> ' non connecté']);
+         echo json_encode(['message'=> 'non connecté']);
        }
     }
  
     public function getUtilisateur() {
-       return $this->utilisateur;
+      if($this->utilisateur !=null){
+         header('Content-Type: application/json');
+         echo json_encode([$_SESSION["utilisateur"]]);
+      }
+      else{
+         header('Content-Type: application/json');
+         echo json_encode(['message'=> 'non connecté']);
+      }
     }
  }
 

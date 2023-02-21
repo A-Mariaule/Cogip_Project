@@ -18,5 +18,9 @@ submit.addEventListener("submit",function(event){
     },
     }
     fetch(url,option)
+    .then(response => response.json())
+  .catch(error => {
+    console.error('Erreur lors de la récupération des données:', error);
+  });
 
 })

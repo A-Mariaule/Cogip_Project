@@ -62,15 +62,22 @@ class companies extends Dbh {
             header('Content-Type: application/json');
             echo json_encode(['error'=> 'La TVA doit commencer par 2 lettres, suivies de chiffres.']);
             $error = true;
-        } else {
-          // Sanitization des données du formulaire
-          /*$name = filter_var($name, FILTER_SANITIZE_STRING);
-          $type_id = filter_var($type_id, FILTER_SANITIZE_NUMBER_INT);
-          $country = filter_var($country, FILTER_SANITIZE_STRING);
-          $tva = filter_var($tva, FILTER_SANITIZE_STRING);
-          $create_dat = filter_var($create_dat, FILTER_SANITIZE_STRING);*/
-        }        
-        if(!$error){
+        }
+
+            if (!$error) {
+                // Vérification si l'entreprise existe déjà
+                $sql = "SELECT * FROM companies WHERE name = :name AND tva = :tva";
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->execute([
+                    ':name' => $name,
+                    ':tva' => $tva
+                ]);
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($row) {
+                    header('Content-Type: application/json');
+                    echo json_encode(['error'=> 'Cette compagnie existe déjà dans la base de données.']);
+                } else {
+                    // Insertion de la nouvelle entreprise
         $sql="INSERT INTO companies (name, type_id, country, tva, create_dat) VALUES (:name, :type_id, :country, :tva, :create_dat)";
         $add=$this->connect()->prepare($sql);
         $add->bindValue(':name', $data["name"]);
@@ -81,6 +88,7 @@ class companies extends Dbh {
         $add->execute();
         header('Content-Type: application/json');
         echo json_encode(['message' => 'Données reçues avec succès']);
+            }
         }
     }
 

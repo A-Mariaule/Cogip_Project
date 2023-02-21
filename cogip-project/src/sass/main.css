@@ -537,19 +537,19 @@ body footer .footer .contacts .contact :nth-child(3) {
   margin-left: 5%;
 }
 body footer .footer .contacts .contact .localisation {
-  background: url("../../../public/img/localisation.svg");
+  background: url("../../../public/img/localisation.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 7.5%;
 }
 body footer .footer .contacts .contact .phonenumber {
-  background: url("../../../public/img/phoneNumber.svg");
+  background: url("../../../public/img/phoneNumber.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 7.5%;
 }
 body footer .footer .contacts .contact .fax {
-  background: url("../../../public/img/fax.svg");
+  background: url("../../../public/img/fax.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 7.5%;

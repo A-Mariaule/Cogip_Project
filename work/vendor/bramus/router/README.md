@@ -1,10 +1,9 @@
 # bramus/router
 
-[![Build Status](https://github.com/bramus/router/workflows/CI/badge.svg)](https://github.com/bramus/router/actions) [![Source](http://img.shields.io/badge/source-bramus/router-blue.svg?style=flat-square)](https://github.com/bramus/router) [![Version](https://img.shields.io/packagist/v/bramus/router.svg?style=flat-square)](https://packagist.org/packages/bramus/router) [![Downloads](https://img.shields.io/packagist/dt/bramus/router.svg?style=flat-square)](https://packagist.org/packages/bramus/router/stats) [![License](https://img.shields.io/packagist/l/bramus/router.svg?style=flat-square)](https://github.com/bramus/router/blob/master/LICENSE)
+[![Build Status](https://github.com/bramus/router/workflows/CI/badge.png)](https://github.com/bramus/router/actions) [![Source](http://img.shields.io/badge/source-bramus/router-blue.png?style=flat-square)](https://github.com/bramus/router) [![Version](https://img.shields.io/packagist/v/bramus/router.png?style=flat-square)](https://packagist.org/packages/bramus/router) [![Downloads](https://img.shields.io/packagist/dt/bramus/router.png?style=flat-square)](https://packagist.org/packages/bramus/router/stats) [![License](https://img.shields.io/packagist/l/bramus/router.png?style=flat-square)](https://github.com/bramus/router/blob/master/LICENSE)
 
 A lightweight and simple object oriented PHP Router.
 Built by Bram(us) Van Damme _([https://www.bram.us](https://www.bram.us))_ and [Contributors](https://github.com/bramus/router/graphs/contributors)
-
 
 ## Features
 
@@ -22,14 +21,10 @@ Built by Bram(us) Van Damme _([https://www.bram.us](https://www.bram.us))_ and [
 - [After Router Middleware / After App Middleware (Finish Callback)](#after-router-middleware--run-callback)
 - [Works fine in subfolders](#subfolder-support)
 
-
-
 ## Prerequisites/Requirements
 
 - PHP 5.3 or greater
 - [URL Rewriting](https://gist.github.com/bramus/5332525)
-
-
 
 ## Installation
 
@@ -38,8 +33,6 @@ Installation is possible using Composer
 ```
 composer require bramus/router ~1.6
 ```
-
-
 
 ## Demo
 
@@ -65,10 +58,9 @@ $router = new \Bramus\Router\Router();
 $router->run();
 ```
 
-
 ### Routing
 
-Hook __routes__ (a combination of one or more HTTP methods and a pattern) using `$router->match(method(s), pattern, function)`:
+Hook **routes** (a combination of one or more HTTP methods and a pattern) using `$router->match(method(s), pattern, function)`:
 
 ```php
 $router->match('GET|POST', 'pattern', function() { … });
@@ -76,7 +68,7 @@ $router->match('GET|POST', 'pattern', function() { … });
 
 `bramus/router` supports `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD` _(see [note](#a-note-on-making-head-requests))_, and `OPTIONS` HTTP request methods. Pass in a single request method, or multiple request methods separated by `|`.
 
-When a route matches against the current URL (e.g. `$_SERVER['REQUEST_URI']`), the attached __route handling function__ will be executed. The route handling function must be a [callable](http://php.net/manual/en/language.types.callable.php). Only the first route matched will be handled. When no matching route is found, a 404 handler will be executed.
+When a route matches against the current URL (e.g. `$_SERVER['REQUEST_URI']`), the attached **route handling function** will be executed. The route handling function must be a [callable](http://php.net/manual/en/language.types.callable.php). Only the first route matched will be handled. When no matching route is found, a 404 handler will be executed.
 
 ### Routing Shorthands
 
@@ -105,8 +97,8 @@ Note: There is no shorthand for `match()` as `bramus/router` will internally re-
 
 Route Patterns can be static or dynamic:
 
-- __Static Route Patterns__ contain no dynamic parts and must match exactly against the `path` part of the current URL.
-- __Dynamic Route Patterns__ contain dynamic parts that can vary per request. The varying parts are named __subpatterns__ and are defined using either Perl-compatible regular expressions (PCRE) or by using __placeholders__
+- **Static Route Patterns** contain no dynamic parts and must match exactly against the `path` part of the current URL.
+- **Dynamic Route Patterns** contain dynamic parts that can vary per request. The varying parts are named **subpatterns** and are defined using either Perl-compatible regular expressions (PCRE) or by using **placeholders**
 
 #### Static Route Patterns
 
@@ -114,8 +106,8 @@ A static route pattern is a regular string representing a URI. It will be compar
 
 Examples:
 
--  `/about`
--  `/contact`
+- `/about`
+- `/contact`
 
 Usage Examples:
 
@@ -128,7 +120,7 @@ $router->get('/about', function() {
 
 #### Dynamic PCRE-based Route Patterns
 
-This type of Route Patterns contain dynamic parts which can vary per request. The varying parts are named __subpatterns__ and are defined using regular expressions.
+This type of Route Patterns contain dynamic parts which can vary per request. The varying parts are named **subpatterns** and are defined using regular expressions.
 
 Examples:
 
@@ -138,14 +130,14 @@ Examples:
 Commonly used PCRE-based subpatterns within Dynamic Route Patterns are:
 
 - `\d+` = One or more digits (0-9)
-- `\w+` = One or more word characters (a-z 0-9 _)
-- `[a-z0-9_-]+` = One or more word characters (a-z 0-9 _) and the dash (-)
+- `\w+` = One or more word characters (a-z 0-9 \_)
+- `[a-z0-9_-]+` = One or more word characters (a-z 0-9 \_) and the dash (-)
 - `.*` = Any character (including `/`), zero or more
 - `[^/]+` = Any character but `/`, one or more
 
 Note: The [PHP PCRE Cheat Sheet](https://courses.cs.washington.edu/courses/cse154/15sp/cheat-sheets/php-regex-cheat-sheet.pdf) might come in handy.
 
-The __subpatterns__ defined in Dynamic PCRE-based Route Patterns are converted to parameters which are passed into the route handling function. Prerequisite is that these subpatterns need to be defined as __parenthesized subpatterns__, which means that they should be wrapped between parens:
+The **subpatterns** defined in Dynamic PCRE-based Route Patterns are converted to parameters which are passed into the route handling function. Prerequisite is that these subpatterns need to be defined as **parenthesized subpatterns**, which means that they should be wrapped between parens:
 
 ```php
 // Bad
@@ -161,7 +153,7 @@ $router->get('/hello/(\w+)', function($name) {
 
 Note: The leading `/` at the very beginning of a route pattern is not mandatory, but is recommended.
 
-When multiple subpatterns are defined, the resulting __route handling parameters__ are passed into the route handling function in the order they are defined in:
+When multiple subpatterns are defined, the resulting **route handling parameters** are passed into the route handling function in the order they are defined in:
 
 ```php
 $router->get('/movies/(\d+)/photos/(\d+)', function($movieId, $photoId) {
@@ -171,7 +163,7 @@ $router->get('/movies/(\d+)/photos/(\d+)', function($movieId, $photoId) {
 
 #### Dynamic Placeholder-based Route Patterns
 
-This type of Route Patterns are the same as __Dynamic PCRE-based Route Patterns__, but with one difference: they don't use regexes to do the pattern matching but they use the more easy __placeholders__ instead. Placeholders are strings surrounded by curly braces, e.g. `{name}`. You don't need to add parens around placeholders.
+This type of Route Patterns are the same as **Dynamic PCRE-based Route Patterns**, but with one difference: they don't use regexes to do the pattern matching but they use the more easy **placeholders** instead. Placeholders are strings surrounded by curly braces, e.g. `{name}`. You don't need to add parens around placeholders.
 
 Examples:
 
@@ -193,7 +185,6 @@ $router->get('/movies/{foo}/photos/{bar}', function($movieId, $photoId) {
     echo 'Movie #' . $movieId . ', photo #' . $photoId;
 });
 ```
-
 
 ### Optional Route Subpatterns
 
@@ -224,7 +215,7 @@ $router->get('/blog(/\d+(/\d+(/\d+(/[a-z0-9_-]+)?)?)?)?', function($year = null,
 });
 ```
 
-Note: It is highly recommended to __always__ define successive optional parameters.
+Note: It is highly recommended to **always** define successive optional parameters.
 
 To make things complete use [quantifiers](http://www.php.net/manual/en/regexp.reference.repetition.php) to require the correct amount of numbers in the URL:
 
@@ -233,7 +224,6 @@ $router->get('/blog(/\d{4}(/\d{2}(/\d{2}(/[a-z0-9_-]+)?)?)?)?', function($year =
     // ...
 });
 ```
-
 
 ### Subrouting / Mounting Routes
 
@@ -256,7 +246,6 @@ $router->mount('/movies', function() use ($router) {
 ```
 
 Nesting of subroutes is possible, just define a second `$router->mount()` in the callable that's already contained within a preceding `$router->mount()`.
-
 
 ### `Class@Method` calls
 
@@ -325,10 +314,9 @@ $router->get('/([a-z0-9-]+)', function($id) use ($router) {
 });
 ```
 
-
 ### Before Route Middlewares
 
-`bramus/router` supports __Before Route Middlewares__, which are executed before the route handling is processed.
+`bramus/router` supports **Before Route Middlewares**, which are executed before the route handling is processed.
 
 Like route handling functions, you hook a handling function to a combination of one or more HTTP request methods and a specific route pattern.
 
@@ -343,10 +331,9 @@ $router->before('GET|POST', '/admin/.*', function() {
 
 Unlike route handling functions, more than one before route middleware is executed when more than one route match is found.
 
-
 ### Before Router Middlewares
 
-Before route middlewares are route specific. Using a general route pattern (viz. _all URLs_), they can become __Before Router Middlewares__ _(in other projects sometimes referred to as before app middlewares)_ which are always executed, no matter what the requested URL is.
+Before route middlewares are route specific. Using a general route pattern (viz. _all URLs_), they can become **Before Router Middlewares** _(in other projects sometimes referred to as before app middlewares)_ which are always executed, no matter what the requested URL is.
 
 ```php
 $router->before('GET', '/.*', function() {
@@ -354,10 +341,9 @@ $router->before('GET', '/.*', function() {
 });
 ```
 
-
 ### After Router Middleware / Run Callback
 
-Run one (1) middleware function, name the __After Router Middleware__ _(in other projects sometimes referred to as after app middlewares)_ after the routing was processed. Just pass it along the `$router->run()` function. The run callback is route independent.
+Run one (1) middleware function, name the **After Router Middleware** _(in other projects sometimes referred to as after app middlewares)_ after the routing was processed. Just pass it along the `$router->run()` function. The run callback is route independent.
 
 ```php
 $router->run(function() { … });
@@ -365,15 +351,13 @@ $router->run(function() { … });
 
 Note: If the route handling function has `exit()`ed the run callback won't be run.
 
-
 ### Overriding the request method
 
 Use `X-HTTP-Method-Override` to override the HTTP Request Method. Only works when the original Request Method is `POST`. Allowed values for `X-HTTP-Method-Override` are `PUT`, `DELETE`, or `PATCH`.
 
-
 ### Subfolder support
 
-Out-of-the box `bramus/router` will run in any (sub)folder you place it into … no adjustments to your code are needed. You can freely move your _entry script_ `index.php` around, and the router will automatically adapt itself to work relatively from the current folder's path by mounting all routes onto that __basePath__.
+Out-of-the box `bramus/router` will run in any (sub)folder you place it into … no adjustments to your code are needed. You can freely move your _entry script_ `index.php` around, and the router will automatically adapt itself to work relatively from the current folder's path by mounting all routes onto that **basePath**.
 
 Say you have a server hosting the domain `www.example.org` using `public_html/` as its document root, with this little _entry script_ `index.php`:
 
@@ -423,7 +407,6 @@ $router->run(function() use ($tpl) {
 
 Given this structure it is still possible to manipulate the output from within the After Router Middleware
 
-
 ## A note on working with PUT
 
 There's no such thing as `$_PUT` in PHP. One must fake it:
@@ -440,7 +423,6 @@ $router->put('/movies/(\d+)', function($id) {
 });
 ```
 
-
 ## A note on making HEAD requests
 
 When making `HEAD` requests all output will be buffered to prevent any content trickling into the response body, as defined in [RFC2616 (Hypertext Transfer Protocol -- HTTP/1.1)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4):
@@ -448,7 +430,6 @@ When making `HEAD` requests all output will be buffered to prevent any content t
 > The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. The metainformation contained in the HTTP headers in response to a HEAD request SHOULD be identical to the information sent in response to a GET request. This method can be used for obtaining metainformation about the entity implied by the request without transferring the entity-body itself. This method is often used for testing hypertext links for validity, accessibility, and recent modification.
 
 To achieve this, `bramus/router` but will internally re-route `HEAD` requests to their equivalent `GET` request and automatically suppress all output.
-
 
 ## Unit Testing & Code Coverage
 
@@ -458,14 +439,11 @@ To achieve this, `bramus/router` but will internally re-route `HEAD` requests to
 
 - If PHPUnit is not installed globally, install it locally throuh composer by running `composer install --dev`. Run the tests themselves by calling `vendor/bin/phpunit`.
 
-  The included `composer.json` will also install `php-code-coverage` which allows one to generate a __Code Coverage Report__. Run `phpunit --coverage-html ./tests-report` (XDebug required), a report will be placed into the `tests-report` subfolder.
-
+  The included `composer.json` will also install `php-code-coverage` which allows one to generate a **Code Coverage Report**. Run `phpunit --coverage-html ./tests-report` (XDebug required), a report will be placed into the `tests-report` subfolder.
 
 ## Acknowledgements
 
 `bramus/router` is inspired upon [Klein](https://github.com/chriso/klein.php), [Ham](https://github.com/radiosilence/Ham), and [JREAM/route](https://bitbucket.org/JREAM/route) . Whilst Klein provides lots of features it is not object oriented. Whilst Ham is Object Oriented, it's bad at _separation of concerns_ as it also provides templating within the routing class. Whilst JREAM/route is a good starting point it is limited in what it does (only GET routes for example).
-
-
 
 ## License
 

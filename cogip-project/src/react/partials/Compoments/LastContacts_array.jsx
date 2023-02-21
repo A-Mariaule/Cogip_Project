@@ -14,7 +14,7 @@ const LastContactsTable = () => {
 
   return (
     <div className="array arrays__lastInvoices">
-       <img className="blocknote" src="../public/img/blocknote.svg" alt="blocknote" />
+       <img className="blocknote" src="../public/img/blocknote.png" alt="blocknote" />
       <h2>Last Contacts</h2>
       <section className="overflowArray">
         <table>

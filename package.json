@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@svgr/cli": "^6.5.1",
     "axios": "^1.3.2",
     "react-router-dom": "^6.8.1"
   }
